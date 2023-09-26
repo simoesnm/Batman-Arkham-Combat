@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DAWProject" id="{cb3c6a93-e119-4de7-b3bb-34ceceaeb657}">
+		<property name="assetPath">
+			<value>BatmanFMOD.RPP.link/</value>
+		</property>
+		<property name="dawProjectPath">
+			<value>BatmanFMOD.RPP</value>
+		</property>
+		<property name="renderedAssetsPath">
+			<value>../../../Desktop/BatmanFiles</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3fbb8872-855b-4865-86eb-d073ed1963c2}</destination>
+		</relationship>
+	</object>
+</objects>

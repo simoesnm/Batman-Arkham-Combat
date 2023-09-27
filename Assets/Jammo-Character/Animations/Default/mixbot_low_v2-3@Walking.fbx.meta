@@ -74,14 +74,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0.38410118
-        functionName: PlayWalkFootsteps
+        functionName: PlayerPunch
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: e6ea2b9a77cd542cab3ff1df0a371e64, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.85552657
-        functionName: PlayWalkFootsteps
+        functionName: PlayerPunch
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: e6ea2b9a77cd542cab3ff1df0a371e64, type: 3}
         floatParameter: 0

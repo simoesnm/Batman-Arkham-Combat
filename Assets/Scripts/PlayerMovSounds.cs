@@ -38,7 +38,9 @@ public class PlayerMovSounds : MonoBehaviour
     {
         GameObject enemyObject = GameObject.Find("JammoPrefab (2)");
         EnemyScript enemyScript = enemyObject.GetComponent<EnemyScript>();
-        
+        jumpInst = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
+        swingInst = FMODUnity.RuntimeManager.CreateInstance(swingEvent);
+        voxInst = FMODUnity.RuntimeManager.CreateInstance(voxEvent);
         
     }
 
@@ -50,18 +52,18 @@ public class PlayerMovSounds : MonoBehaviour
 
     public void PlayerPunch(){
 
-        kickpunch = 0;
+       // kickpunch = 0;
         swingInst.start();
-        swingInst.setParameterByName("Enemy", kickpunch);
+        //swingInst.setParameterByName("Enemy", kickpunch);
         Debug.Log("Punch activated");
 
     }
 
     public void PlayerKick(){
 
-        kickpunch = 1;
+        //kickpunch = 1;
         swingInst.start();
-        swingInst.setParameterByName("Enemy", kickpunch);
+        //swingInst.setParameterByName("Enemy", kickpunch);
 
     }
 

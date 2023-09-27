@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -7311,21 +7311,6 @@ Transform:
   m_Father: {fileID: 332836901}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &170549850
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 2
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
-  m_AssemblyName: 
 --- !u!1 &173520781
 GameObject:
   m_ObjectHideFlags: 0
@@ -21888,7 +21873,7 @@ MonoBehaviour:
     invertFade: 0
     distanceFadeStart: 10000
     distanceFadeEnd: 10000
-    textureOffset: {x: -0, y: -0, z: -0}
+    textureOffset: {x: -0.063664526, y: -0, z: -0.063664526}
     falloffMode: 0
     maskMode: 0
     materialMask: {fileID: 0}
@@ -21963,8 +21948,8 @@ GameObject:
   - component: {fileID: 473079557}
   - component: {fileID: 473079555}
   - component: {fileID: 473079554}
-  - component: {fileID: 473079560}
-  - component: {fileID: 473079559}
+  - component: {fileID: 473079561}
+  - component: {fileID: 473079562}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -22201,7 +22186,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &473079559
+--- !u!114 &473079561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22210,15 +22195,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 473079553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc401c905b9944271814061dc9609cd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  akGameObjectID: 18446744073709551615
-  EmittersToStartListeningTo: []
-  EmittersToStopListeningTo: []
-  isDefaultListener: 1
-  listenerId: 0
---- !u!114 &473079560
+  attenuationObject: {fileID: 0}
+--- !u!114 &473079562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22227,21 +22208,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 473079553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a75840a44ad44c6b928bbb6e29b24fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_Collider: {fileID: 0}
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  isRegistered: 1
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Master
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &477481976
 GameObject:
   m_ObjectHideFlags: 0
@@ -39309,7 +39284,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1518163834}
-  - component: {fileID: 1518163833}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -39317,18 +39291,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1518163833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518163832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 170549850}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1518163834
 Transform:
   m_ObjectHideFlags: 19
@@ -43466,7 +43428,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 2293
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.014798239, y: NaN, z: 1.02e-43, w: 3e-45}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 1.02e-43, w: 1.3e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.33
@@ -62340,6 +62302,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.9285688
       objectReference: {fileID: 0}
+    - target: {fileID: 4551081087874389161, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      propertyPath: jumpEvent.Path
+      value: event:/char/char_movement/char_jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551081087874389161, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      propertyPath: jumpEvent.Guid.Data1
+      value: 2043803358
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551081087874389161, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      propertyPath: jumpEvent.Guid.Data2
+      value: 1320876434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551081087874389161, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      propertyPath: jumpEvent.Guid.Data3
+      value: 1263437724
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551081087874389161, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      propertyPath: jumpEvent.Guid.Data4
+      value: -1580646404
+      objectReference: {fileID: 0}
     - target: {fileID: 4551081087874389163, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: m_Name
       value: JammoPrefab
@@ -62478,7 +62460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5911941530615285302, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: m_ImpulseDefinition.m_AmplitudeGain
-      value: 3
+      value: 9.98484
       objectReference: {fileID: 0}
     - target: {fileID: 5927021944989694995, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -62503,6 +62485,10 @@ PrefabInstance:
     - target: {fileID: 5950276664379642772, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -174.87521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084253688199418473, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6084253688199418473, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: m_Parameters.widthMultiplier
@@ -62711,6 +62697,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4551081087874389163, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 341553615}
+    - targetCorrespondingSourceObject: {fileID: 4551081087874389163, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6921184843540503677}
   m_SourcePrefab: {fileID: 100100000, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
 --- !u!96 &6084253688199418473 stripped
 TrailRenderer:
@@ -63299,6 +63288,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3774967082520677905, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
   m_PrefabInstance: {fileID: 6084253688199418471}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6921184843540503677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341553608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ea2b9a77cd542cab3ff1df0a371e64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpEvent:
+    Guid:
+      Data1: 2043803358
+      Data2: 1320876434
+      Data3: 1263437724
+      Data4: -1580646404
+    Path: event:/char/char_movement/char_jump
+  swingEvent:
+    Guid:
+      Data1: 1512822488
+      Data2: 1261023589
+      Data3: 1661416093
+      Data4: -1878752863
+    Path: event:/char/char_attack/char_swing
+  voxEvent:
+    Guid:
+      Data1: 1099826662
+      Data2: 1341420737
+      Data3: 28335232
+      Data4: 1484096071
+    Path: event:/char/char_vox/char_voice
+  kickpunch: 0
+  hitEnem: 1
 --- !u!1 &6944652383833032761
 GameObject:
   m_ObjectHideFlags: 0

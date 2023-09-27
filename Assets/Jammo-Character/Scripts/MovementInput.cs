@@ -24,6 +24,8 @@ public class MovementInput : MonoBehaviour
 	[SerializeField] bool blockRotationPlayer;
 	private bool isGrounded;
 
+	
+
 
 	void Start()
 	{
@@ -45,6 +47,7 @@ public class MovementInput : MonoBehaviour
 
 		moveVector = new Vector3(0, verticalVel * fallSpeed * Time.deltaTime, 0);
 		controller.Move(moveVector);
+		
 	}
 
 	void PlayerMoveAndRotation()
@@ -100,6 +103,8 @@ public class MovementInput : MonoBehaviour
 		{
 			anim.SetFloat("InputMagnitude", inputMagnitude * acceleration, .1f, Time.deltaTime);
 			PlayerMoveAndRotation();
+			
+
 		}
 		else
 		{

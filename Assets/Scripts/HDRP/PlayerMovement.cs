@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    
     
 
     Vector3 velocity;
@@ -45,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
 
         movement.Enable();
         jump.Enable();
+        
+       
+
     }
 #endif
 
@@ -80,6 +85,8 @@ public class PlayerMovement : MonoBehaviour
         if(jumpPressed && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            
+
         }
 
         velocity.y += gravity * Time.deltaTime;

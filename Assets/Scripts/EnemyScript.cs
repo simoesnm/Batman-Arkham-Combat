@@ -33,6 +33,8 @@ public class EnemyScript : MonoBehaviour
     private Coroutine DamageCoroutine;
     private Coroutine MovementCoroutine;
 
+    
+
     //Events
     public UnityEvent<EnemyScript> OnDamage;
     public UnityEvent<EnemyScript> OnStopMoving;
@@ -89,7 +91,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     //Listened event from Player Animation
-    void OnPlayerHit(EnemyScript target)
+    public void OnPlayerHit(EnemyScript target)
     {
         if (target == this)
         {
@@ -99,7 +101,8 @@ public class EnemyScript : MonoBehaviour
             enemyDetection.SetCurrentTarget(null);
             isLockedTarget = false;
             OnDamage.Invoke(this);
-
+            
+            
             health--;
 
             if (health <= 0)

@@ -202,7 +202,7 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638314118378138283
+  lastModified: 638315058969062540
   FileSizes:
   - Name: Desktop
     Value: 221760
@@ -383,7 +383,7 @@ MonoBehaviour:
   - {fileID: -2924489851919269417}
   StringsBanks:
   - {fileID: 6918132495415489709}
-  cacheTime: 638314118378167367
+  cacheTime: 638315058969062540
   cacheVersion: 131603
 --- !u!114 &171245626261810247
 MonoBehaviour:
@@ -700,7 +700,7 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638314118378167367
+  lastModified: 638315048154169659
   FileSizes:
   - Name: Desktop
     Value: 2042

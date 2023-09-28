@@ -118873,7 +118873,7 @@ AnimationClip:
     intParameter: 2
     messageOptions: 0
   - time: 1.2333333
-    functionName: PlayerPunch
+    functionName: PlayerAttack
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: e6ea2b9a77cd542cab3ff1df0a371e64, type: 3}
     floatParameter: 0

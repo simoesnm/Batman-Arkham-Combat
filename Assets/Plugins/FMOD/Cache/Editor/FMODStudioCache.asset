@@ -202,10 +202,10 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638315058969062540
+  lastModified: 638315957482355371
   FileSizes:
   - Name: Desktop
-    Value: 221760
+    Value: 221920
   Exists: 1
 --- !u!114 &-2599022366668979760
 MonoBehaviour:
@@ -261,32 +261,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1455363288347502527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/char_swing/Enemy
-  m_EditorClassIdentifier: 
-  Name: Enemy
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2485391492
-    data2: 2907744937
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - NotHit
-  - Hit
-  Exists: 1
 --- !u!114 &-988274199007471122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +357,7 @@ MonoBehaviour:
   - {fileID: -2924489851919269417}
   StringsBanks:
   - {fileID: 6918132495415489709}
-  cacheTime: 638315058969062540
+  cacheTime: 638315957482393702
   cacheVersion: 131603
 --- !u!114 &171245626261810247
 MonoBehaviour:
@@ -408,12 +382,10 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters:
-  - {fileID: 1766515617497577103}
-  - {fileID: -1455363288347502527}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 340
+  Length: 400
 --- !u!114 &777934952695067209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,32 +413,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1766515617497577103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/char_swing/PunchKick
-  m_EditorClassIdentifier: 
-  Name: PunchKick
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2847856869
-    data2: 3451267980
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Punch
-  - Kick
-  Exists: 1
 --- !u!114 &2439756217462375385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +646,7 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638315048154169659
+  lastModified: 638315957482393702
   FileSizes:
   - Name: Desktop
     Value: 2042

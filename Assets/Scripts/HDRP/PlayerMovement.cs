@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if(jumpPressed && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            
+            Debug.Log("Jump pressed");
 
         }
 

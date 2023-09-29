@@ -9,19 +9,25 @@ public class PlayerMovSounds : MonoBehaviour
     
     //Jump
 
-        private FMOD.Studio.EventInstance jumpInst;
+        public FMOD.Studio.EventInstance jumpInst;
 
         public FMODUnity.EventReference jumpEvent;
 
     //Swing
 
-    private FMOD.Studio.EventInstance swingInst;
+    public FMOD.Studio.EventInstance swingInst;
 
     public FMODUnity.EventReference swingEvent;
 
+    //Attack
+
+    public FMOD.Studio.EventInstance attackInst;
+
+    public FMODUnity.EventReference attackEvent;
+
     //Vox
 
-    private FMOD.Studio.EventInstance voxInst;
+    public FMOD.Studio.EventInstance voxInst;
 
     public FMODUnity.EventReference voxEvent;
 
@@ -39,6 +45,7 @@ public class PlayerMovSounds : MonoBehaviour
         GameObject enemyObject = GameObject.Find("JammoPrefab (2)");
         EnemyScript enemyScript = enemyObject.GetComponent<EnemyScript>();
         swingInst = FMODUnity.RuntimeManager.CreateInstance(swingEvent);
+        attackInst = FMODUnity.RuntimeManager.CreateInstance(attackEvent);
         
     }
 
@@ -48,18 +55,26 @@ public class PlayerMovSounds : MonoBehaviour
         
     }
 
-    public void PlayerAttack(){
+    public void PlayerWoosh(){
 
         
         swingInst.start();
-        swingInst.setParameterByName("Enemy", 1);
-        Debug.Log("Punch activated");
+        swingInst.setParameterByName("Enemy", 0);
+        Debug.Log("Attack activated");
 
     }
+    
+    public void PlayerAttack(){
 
+        
+        attackInst.start();
+        attackInst.setParameterByName("Enemy", 1);
+        Debug.Log("Attack activated");
+
+    }
     
 
-    void PlayerJump(){
+   public  void PlayerJump(){
 
         jumpInst.start();
         Debug.Log("Jump is called");

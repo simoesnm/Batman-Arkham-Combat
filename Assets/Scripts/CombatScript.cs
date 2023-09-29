@@ -42,6 +42,10 @@ public class CombatScript : MonoBehaviour
 
     int animationCount = 0;
     string[] attacks;
+    public int currentAttackIndex;
+
+    public PlayerMovSounds playerMovSounds;
+    
 
     void Start()
     {
@@ -50,11 +54,19 @@ public class CombatScript : MonoBehaviour
         enemyDetection = GetComponentInChildren<EnemyDetection>();
         movementInput = GetComponent<MovementInput>();
         impulseSource = GetComponentInChildren<CinemachineImpulseSource>();
+        
+        
+    }
+
+    void Update(){
+
+        Debug.Log("This is the" + attacks[currentAttackIndex]);
     }
 
     //This function gets called whenever the player inputs the punch action
     void AttackCheck()
     {
+        //Debug.Log("Attacking Pressed");
         if (isAttackingEnemy)
             return;
 
@@ -82,17 +94,24 @@ public class CombatScript : MonoBehaviour
 
         //AttackTarget
         Attack(lockedTarget, TargetDistance(lockedTarget));
+        
+        Debug.Log("Attacking Pressed 2");
     }
 
     public void Attack(EnemyScript target, float distance)
     {
         //Types of attack animation
         attacks = new string[] { "AirKick", "AirKick2", "AirPunch", "AirKick3" };
-
+        
+        Debug.Log("This is the" + attacks[currentAttackIndex]);
+        
         //Attack nothing in case target is null
         if (target == null)
         {
             AttackType("GroundPunch", .2f, null, 0);
+            playerMovSounds.PlayerAttack();
+            playerMovSounds.attackInst.setParameterByName("Enemy", 0);
+            Debug.Log("Ground Punch");
             return;
         }
 
@@ -101,6 +120,7 @@ public class CombatScript : MonoBehaviour
             animationCount = (int)Mathf.Repeat((float)animationCount + 1, (float)attacks.Length);
             string attackString = isLastHit() ? attacks[Random.Range(0, attacks.Length)] : attacks[animationCount];
             AttackType(attackString, attackCooldown, target, .65f);
+            
         }
         else
         {
@@ -159,6 +179,9 @@ public class CombatScript : MonoBehaviour
         OnTrajectory.Invoke(target);
         transform.DOLookAt(target.transform.position, .2f);
         transform.DOMove(TargetOffset(target.transform), duration);
+        playerMovSounds.PlayerWoosh(); 
+        playerMovSounds.PlayerJump();
+        Debug.Log("Flying movement");
     }
 
     void CounterCheck()
@@ -212,19 +235,28 @@ public class CombatScript : MonoBehaviour
     {
         if (lockedTarget == null || enemyManager.AliveEnemyCount() == 0)
             return;
+            playerMovSounds.attackInst.setParameterByName("Enemy", 0);
+
 
         OnHit.Invoke(lockedTarget);
 
         //Polish
         punchParticle.PlayParticleAtPosition(punchPosition.position);
+        playerMovSounds.PlayerAttack();
+        Debug.Log("Sound on Polish");
+        
     }
 
     public void DamageEvent()
     {
         animator.SetTrigger("Hit");
+        // playerMovSounds.swingInst.setParameterByName("Enemy", 1);
+        // Debug.Log("Damage done");
 
         if (damageCoroutine != null)
             StopCoroutine(damageCoroutine);
+            // playerMovSounds.swingInst.setParameterByName("Enemy", 0);
+            // Debug.Log("Didn't hit");
         damageCoroutine = StartCoroutine(DamageCoroutine());
 
         IEnumerator DamageCoroutine()

@@ -33,7 +33,7 @@ public class EnemyScript : MonoBehaviour
     private Coroutine DamageCoroutine;
     private Coroutine MovementCoroutine;
 
-    
+    public PlayerMovSounds playerMovSounds;
 
     //Events
     public UnityEvent<EnemyScript> OnDamage;
@@ -101,6 +101,9 @@ public class EnemyScript : MonoBehaviour
             enemyDetection.SetCurrentTarget(null);
             isLockedTarget = false;
             OnDamage.Invoke(this);
+
+            // playerMovSounds.swingInst.setParameterByName("Enemy", 1);
+            // Debug.Log("Hit param 1 on Enemy Script");
             
             
             health--;
@@ -116,6 +119,11 @@ public class EnemyScript : MonoBehaviour
 
             StopMoving();
         }
+        // else{
+
+        //     playerMovSounds.swingInst.setParameterByName("Enemy", 0);
+        //     Debug.Log("Hit param 0 on Enemy Script");
+        // }
 
         IEnumerator HitCoroutine()
         {

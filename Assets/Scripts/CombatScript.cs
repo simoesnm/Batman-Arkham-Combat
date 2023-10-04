@@ -45,6 +45,13 @@ public class CombatScript : MonoBehaviour
     public int currentAttackIndex;
 
     public PlayerMovSounds playerMovSounds;
+
+
+    public FMOD.Studio.EventInstance snapshotSlowInst;
+
+    public int slowmotionInst;
+
+    
     
 
     void Start()
@@ -54,13 +61,17 @@ public class CombatScript : MonoBehaviour
         enemyDetection = GetComponentInChildren<EnemyDetection>();
         movementInput = GetComponent<MovementInput>();
         impulseSource = GetComponentInChildren<CinemachineImpulseSource>();
+
+        snapshotSlowInst = FMODUnity.RuntimeManager.CreateInstance("snaphot:/SlowMotion");
+        
+        slowmotionInst = 1;
         
         
     }
 
     void Update(){
 
-        Debug.Log("This is the" + attacks[currentAttackIndex]);
+        //Debug.Log("This is the" + attacks[currentAttackIndex]);
     }
 
     //This function gets called whenever the player inputs the punch action
@@ -144,6 +155,7 @@ public class CombatScript : MonoBehaviour
         //Check if last enemy
         if (isLastHit())
             StartCoroutine(FinalBlowCoroutine());
+            
 
         if (target == null)
             return;
@@ -167,10 +179,18 @@ public class CombatScript : MonoBehaviour
         {
             Time.timeScale = .5f;
             lastHitCamera.SetActive(true);
+            playerMovSounds.SlowMotion();
+            snapshotSlowInst.setParameterByName("Intensity", 0);
+            Debug.Log("Slow Motion is Final Blow Middle");
             lastHitFocusObject.position = lockedTarget.transform.position;
             yield return new WaitForSecondsRealtime(2);
+            snapshotSlowInst.setParameterByName("Intensity", 1);
+            Debug.Log("End Slow Motion");
             lastHitCamera.SetActive(false);
             Time.timeScale = 1f;
+            playerMovSounds.attackInst.setParameterByName("Enemy", 0);
+            
+            
         }
     }
 
@@ -239,8 +259,8 @@ public class CombatScript : MonoBehaviour
 
 
         OnHit.Invoke(lockedTarget);
-
-        //Polish
+        
+        //Polish 
         punchParticle.PlayParticleAtPosition(punchPosition.position);
         playerMovSounds.PlayerAttack();
         Debug.Log("Sound on Polish");
@@ -250,13 +270,11 @@ public class CombatScript : MonoBehaviour
     public void DamageEvent()
     {
         animator.SetTrigger("Hit");
-        // playerMovSounds.swingInst.setParameterByName("Enemy", 1);
-        // Debug.Log("Damage done");
+        
 
         if (damageCoroutine != null)
             StopCoroutine(damageCoroutine);
-            // playerMovSounds.swingInst.setParameterByName("Enemy", 0);
-            // Debug.Log("Didn't hit");
+            
         damageCoroutine = StartCoroutine(DamageCoroutine());
 
         IEnumerator DamageCoroutine()
@@ -295,14 +313,17 @@ public class CombatScript : MonoBehaviour
     {
         movementInput.acceleration = 0;
         DOVirtual.Float(0, 1, .6f, ((acceleration)=> movementInput.acceleration = acceleration));
+
     }
 
     bool isLastHit()
     {
         if (lockedTarget == null)
             return false;
+            
 
         return enemyManager.AliveEnemyCount() == 1 && lockedTarget.health <= 1;
+       
     }
 
     #region Input

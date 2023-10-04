@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8833896737975027575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/char_punch/SlowMotion
+  m_EditorClassIdentifier: 
+  Name: SlowMotion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 958349170
+    data2: 620213321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8735144279187929784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +76,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1797
 --- !u!114 &-8419745214344406967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +154,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -8419745214344406967}
+  - {fileID: -8833896737975027575}
   MinDistance: 1
   MaxDistance: 20
   Length: 100
@@ -160,6 +185,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5296527935485678214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/char/char_movement/char_land
+  m_EditorClassIdentifier: 
+  Path: event:/char/char_movement/char_land
+  Guid:
+    Data1: 1011080687
+    Data2: 1299291384
+    Data3: -224253526
+    Data4: 1873136124
+  Banks:
+  - {fileID: -2924489851919269417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1048
 --- !u!114 &-4408869819851948318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,10 +254,34 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638315957482355371
+  lastModified: 638320190208383093
   FileSizes:
   - Name: Desktop
-    Value: 221920
+    Value: 378304
+  Exists: 1
+--- !u!114 &-2891217544133037157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/enem_vox/SlowMotion
+  m_EditorClassIdentifier: 
+  Name: SlowMotion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 958349170
+    data2: 620213321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &-2599022366668979760
 MonoBehaviour:
@@ -233,7 +309,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1797
 --- !u!114 &-2497384444914498017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +328,34 @@ MonoBehaviour:
     Data2: 1286679292
     Data3: 77072831
     Data4: -1898169058
+  Banks:
+  - {fileID: -2924489851919269417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7339868826659097967}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 347
+--- !u!114 &-1664971235149998116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enem/enem_death
+  m_EditorClassIdentifier: 
+  Path: event:/enem/enem_death
+  Guid:
+    Data1: 616482515
+    Data2: 1076787008
+    Data3: -139083849
+    Data4: 1446763209
   Banks:
   - {fileID: -2924489851919269417}
   IsStream: 0
@@ -288,6 +392,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-777531579976650043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enem/enem_attack
+  m_EditorClassIdentifier: 
+  Path: event:/enem/enem_attack
+  Guid:
+    Data1: 1398078143
+    Data2: 1275347637
+    Data3: 1078242216
+    Data4: -1793248308
+  Banks:
+  - {fileID: -2924489851919269417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-331260379890248117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,17 +478,20 @@ MonoBehaviour:
   - {fileID: -2497384444914498017}
   - {fileID: 4103208172893550336}
   - {fileID: 4306119494901221909}
-  - {fileID: 777934952695067209}
   - {fileID: 7108714904881952496}
   - {fileID: 4568643217849183451}
   - {fileID: -988274199007471122}
   - {fileID: 171245626261810247}
-  EditorParameters: []
+  - {fileID: -5296527935485678214}
+  - {fileID: -1664971235149998116}
+  - {fileID: -777531579976650043}
+  EditorParameters:
+  - {fileID: 6808059649677458383}
   MasterBanks:
   - {fileID: -2924489851919269417}
   StringsBanks:
   - {fileID: 6918132495415489709}
-  cacheTime: 638315957482393702
+  cacheTime: 638320190208422159
   cacheVersion: 131603
 --- !u!114 &171245626261810247
 MonoBehaviour:
@@ -386,7 +520,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
---- !u!114 &777934952695067209
+--- !u!114 &1170166473295150645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,24 +529,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/char/char_movement/char_walk
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SlowMotion/Intensity
   m_EditorClassIdentifier: 
-  Path: event:/char/char_movement/char_walk
-  Guid:
-    Data1: 1011080687
-    Data2: 1299291384
-    Data3: -224253526
-    Data4: 1873136124
-  Banks:
-  - {fileID: -2924489851919269417}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0.01
+  ID:
+    data1: 3906838759
+    data2: 2615662815
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2439756217462375385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +571,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3987830441621871556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/char_attack/SlowMotion
+  m_EditorClassIdentifier: 
+  Name: SlowMotion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 958349170
+    data2: 620213321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4103208172893550336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +702,7 @@ MonoBehaviour:
   Parameters:
   - {fileID: -8735144279187929784}
   - {fileID: -8198016285286852692}
+  - {fileID: 3987830441621871556}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -560,13 +716,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/enem_vox/Parameter 1
+  m_Name: parameter:/enem_vox/EnemyState
   m_EditorClassIdentifier: 
-  Name: Parameter 1
+  Name: EnemyState
   StudioPath: 
   Min: 0
-  Max: 2
-  Default: 0
+  Max: 5
+  Default: 1
   ID:
     data1: 3481771300
     data2: 4168137956
@@ -574,8 +730,11 @@ MonoBehaviour:
   IsGlobal: 0
   Labels:
   - Idle
-  - Moving
+  - Charging
   - Attacking
+  - Retreat
+  - Damage
+  - Dead
   Exists: 1
 --- !u!114 &6714205625886943005
 MonoBehaviour:
@@ -600,10 +759,11 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8371924996562883188}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 5388
 --- !u!114 &6783047457819382573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +791,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6808059649677458383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SlowMotion
+  m_EditorClassIdentifier: 
+  Name: SlowMotion
+  StudioPath: parameter:/SlowMotion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 958349170
+    data2: 620213321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6918132495415489709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,10 +830,10 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638315957482393702
+  lastModified: 638320190208422159
   FileSizes:
   - Name: Desktop
-    Value: 2042
+    Value: 2242
   Exists: 1
 --- !u!114 &7108714904881952496
 MonoBehaviour:
@@ -672,12 +856,36 @@ MonoBehaviour:
   Banks:
   - {fileID: -2924489851919269417}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MinDistance: 1.75
+  MaxDistance: 8.6
+  Length: 3000
+--- !u!114 &7339868826659097967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/enem_flyingback/SlowMotion
+  m_EditorClassIdentifier: 
+  Name: SlowMotion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 958349170
+    data2: 620213321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7734501250160355463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,9 +911,36 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 6119028764239933273}
+  - {fileID: -2891217544133037157}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 5000
+--- !u!114 &8371924996562883188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_slowmotion/Enemy
+  m_EditorClassIdentifier: 
+  Name: Enemy
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2485391492
+    data2: 2907744937
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - NotHit
+  - Hit
+  Exists: 1
 --- !u!114 &8491959967756021292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +991,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 1170166473295150645}
   MinDistance: 0
   MaxDistance: 0
   Length: 0

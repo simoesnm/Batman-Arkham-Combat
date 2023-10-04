@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{08b13d6b-2659-4b67-907f-f13c6943c385}">
+		<property name="name">
+			<value>SlowMotion</value>
+		</property>
+		<relationship name="folder">
+			<destination>{36135002-4a9c-4199-b792-a10cce6385d8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{303e6786-c863-484a-a945-c9e749c7a350}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{303e6786-c863-484a-a945-c9e749c7a350}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{52b03bbc-8224-42ff-88ba-194852780175}">
+		<property name="name">
+			<value>EnemyMovement</value>
+		</property>
+		<relationship name="folder">
+			<destination>{36135002-4a9c-4199-b792-a10cce6385d8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7b97b545-f54b-4d88-afe5-2f10e03dde35}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7b97b545-f54b-4d88-afe5-2f10e03dde35}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Idle</value>
+			<value>Moving</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

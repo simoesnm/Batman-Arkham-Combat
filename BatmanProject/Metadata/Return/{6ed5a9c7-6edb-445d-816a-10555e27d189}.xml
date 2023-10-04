@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{6ed5a9c7-6edb-445d-816a-10555e27d189}">
+		<property name="name">
+			<value>SlowMOtion</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{4101ec29-da53-4281-bf98-d9f1bd01ae22}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{b3bb77bb-2d28-4d80-9e6f-660acde42631}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{26a8537f-79e9-4c4c-a4b1-2e1f50f4d5ad}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{4101ec29-da53-4281-bf98-d9f1bd01ae22}">
+		<relationship name="effects">
+			<destination>{87b6277d-df9c-41e1-b529-2e72e53fba5b}</destination>
+			<destination>{de250fea-72c1-4cfd-885d-f43820c85af2}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{b3bb77bb-2d28-4d80-9e6f-660acde42631}" />
+	<object class="PitchShifterEffect" id="{87b6277d-df9c-41e1-b529-2e72e53fba5b}" />
+	<object class="MixerBusFader" id="{de250fea-72c1-4cfd-885d-f43820c85af2}" />
+</objects>

@@ -31,10 +31,33 @@ public class PlayerMovSounds : MonoBehaviour
 
     public FMODUnity.EventReference voxEvent;
 
+    //Footsteps
+
+    public FMOD.Studio.EventInstance footstepInst;
+
+    public FMODUnity.EventReference footstepEvent;
+
+    //Landing
+
+    public FMOD.Studio.EventInstance landingInst;
+
+    public FMODUnity.EventReference landingEvent;
+
+    //Slow Motion
+
+    public FMOD.Studio.EventInstance slowInst;
+
+    public FMODUnity.EventReference slowEvent;
+
     [Header("FMOD Params")]
 
     public int kickpunch;
     public bool hitEnem = false;
+    public bool playerAttack = false;
+    CombatScript combatScript;
+    EnemyScript enemyScript;
+
+  
 
     // EnemyScript enemyScript = GetComponent<EnemyScript>(); 
     
@@ -43,9 +66,13 @@ public class PlayerMovSounds : MonoBehaviour
     void Start()
     {
         GameObject enemyObject = GameObject.Find("JammoPrefab (2)");
-        EnemyScript enemyScript = enemyObject.GetComponent<EnemyScript>();
+        EnemyScript enemyScript;
         swingInst = FMODUnity.RuntimeManager.CreateInstance(swingEvent);
         attackInst = FMODUnity.RuntimeManager.CreateInstance(attackEvent);
+        landingInst = FMODUnity.RuntimeManager.CreateInstance(landingEvent);
+        footstepInst = FMODUnity.RuntimeManager.CreateInstance(footstepEvent);
+        jumpInst = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
+        slowInst = FMODUnity.RuntimeManager.CreateInstance(slowEvent);
         
     }
 
@@ -70,6 +97,8 @@ public class PlayerMovSounds : MonoBehaviour
         attackInst.start();
         attackInst.setParameterByName("Enemy", 1);
         Debug.Log("Attack activated");
+        playerAttack = true;
+
 
     }
     
@@ -88,14 +117,26 @@ public class PlayerMovSounds : MonoBehaviour
 
     }
 
-    void PlayWalkFootsteps(){
+    void PlayLanding(){
 
-
+        landingInst.start();
 
     }
 
     void PlayRunFootsteps(){
 
+        footstepInst.start();
+    }
+
+    public void SlowMotion(){
+
+        slowInst.start();
+
+        // if(combatScript.HitEvent().noEnemies = false){
+
+
+        //     slowInst.release();
+        // }
 
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{018d9139-53ab-4250-841a-0870f632078e}">
+		<property name="assetPath">
+			<value>RobotFoot/Robots, Movement, Transformer, Footsteps, Ground Breaks SND45987 5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.91570833333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3fbb8872-855b-4865-86eb-d073ed1963c2}</destination>
+		</relationship>
+	</object>
+</objects>

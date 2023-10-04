@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{e47dd86e-bddf-4c07-adfc-6912238c5b12}">
+		<property name="assetPath">
+			<value>RobotFoot/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3fbb8872-855b-4865-86eb-d073ed1963c2}</destination>
+		</relationship>
+	</object>
+</objects>

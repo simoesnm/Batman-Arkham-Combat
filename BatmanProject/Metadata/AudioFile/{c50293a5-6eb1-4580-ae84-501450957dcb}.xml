@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c50293a5-6eb1-4580-ae84-501450957dcb}">
+		<property name="assetPath">
+			<value>Cartoon, Impact, Bonk, Crash, Hits 01 SND11776 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.5422499999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3fbb8872-855b-4865-86eb-d073ed1963c2}</destination>
+		</relationship>
+	</object>
+</objects>

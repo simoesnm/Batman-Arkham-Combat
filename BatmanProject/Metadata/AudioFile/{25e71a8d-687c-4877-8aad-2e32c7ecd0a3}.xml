@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{25e71a8d-687c-4877-8aad-2e32c7ecd0a3}">
+		<property name="assetPath">
+			<value>Cartoon, Boing, Retro, Jump 01 SND5934.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.34743750000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3fbb8872-855b-4865-86eb-d073ed1963c2}</destination>
+		</relationship>
+	</object>
+</objects>

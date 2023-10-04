@@ -18,15 +18,15 @@ public class EnemyScript : MonoBehaviour
     private Vector3 moveDirection;
 
     [Header("States")]
-    [SerializeField] private bool isPreparingAttack;
-    [SerializeField] private bool isMoving;
-    [SerializeField] private bool isRetreating;
-    [SerializeField] private bool isLockedTarget;
-    [SerializeField] private bool isStunned;
-    [SerializeField] private bool isWaiting = true;
+    [SerializeField] public bool isPreparingAttack;
+    [SerializeField] public bool isMoving;
+    [SerializeField] public bool isRetreating;
+    [SerializeField] public bool isLockedTarget;
+    [SerializeField] public bool isStunned;
+    [SerializeField] public bool isWaiting = true; 
 
     [Header("Polish")]
-    [SerializeField] private ParticleSystem counterParticle;
+    [SerializeField] public ParticleSystem counterParticle;
 
     private Coroutine PrepareAttackCoroutine;
     private Coroutine RetreatCoroutine;
@@ -34,15 +34,22 @@ public class EnemyScript : MonoBehaviour
     private Coroutine MovementCoroutine;
 
     public PlayerMovSounds playerMovSounds;
+    EnemySoundsScript enemysoundsScript;
+    public bool enemyState;
 
     //Events
     public UnityEvent<EnemyScript> OnDamage;
     public UnityEvent<EnemyScript> OnStopMoving;
     public UnityEvent<EnemyScript> OnRetreat;
+    public UnityEvent<EnemyScript> OnAttack;
+
+   
 
     void Start()
     {
         enemyManager = GetComponentInParent<EnemyManager>();
+
+        enemyState = false;
 
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
@@ -55,6 +62,8 @@ public class EnemyScript : MonoBehaviour
         playerCombat.OnTrajectory.AddListener((x) => OnPlayerTrajectory(x));
 
         MovementCoroutine = StartCoroutine(EnemyMovement());
+
+        
 
     }
 
@@ -86,9 +95,13 @@ public class EnemyScript : MonoBehaviour
         //Constantly look at player
         transform.LookAt(new Vector3(playerCombat.transform.position.x, transform.position.y, playerCombat.transform.position.z));
 
+        //EnemyVoxSound();
+
         //Only moves if the direction is set
         MoveEnemy(moveDirection);
     }
+
+    
 
     //Listened event from Player Animation
     public void OnPlayerHit(EnemyScript target)
@@ -160,6 +173,8 @@ public class EnemyScript : MonoBehaviour
         characterController.enabled = false;
         animator.SetTrigger("Death");
         enemyManager.SetEnemyAvailiability(this, false);
+        // enemysoundsScript.enemyState = 5;
+        // Debug.Log("Enemy Dead");
     }
 
     public void SetRetreat()
@@ -189,31 +204,40 @@ public class EnemyScript : MonoBehaviour
     {
         isWaiting = false;
 
+        
         PrepareAttackCoroutine = StartCoroutine(PrepAttack());
+       
 
         IEnumerator PrepAttack()
         {
             PrepareAttack(true);
+            //enemyState = true;
+            
             yield return new WaitForSeconds(.2f);
             moveDirection = Vector3.forward;
             isMoving = true;
+            
         }
     }
 
 
-    void PrepareAttack(bool active)
+    public void PrepareAttack(bool active)
     {
         isPreparingAttack = active;
 
         if (active)
-        {
+        {   
+            OnAttack.Invoke(this);
             counterParticle.Play();
+            enemyState = true;
+            
         }
         else
         {
             StopMoving();
             counterParticle.Clear();
             counterParticle.Stop();
+            
         }
     }
 
@@ -287,6 +311,7 @@ public class EnemyScript : MonoBehaviour
     {
         isMoving = false;
         moveDirection = Vector3.zero;
+        //enemysoundsScript.enemyWalkInst.setParameterByName("EnemyMovement", 0);
         if(characterController.enabled)
             characterController.Move(moveDirection);
     }

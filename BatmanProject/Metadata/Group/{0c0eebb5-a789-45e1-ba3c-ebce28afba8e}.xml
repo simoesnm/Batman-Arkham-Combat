@@ -4,6 +4,9 @@
 		<property name="color">
 			<value>Red</value>
 		</property>
+		<property name="volume">
+			<value>-2.5</value>
+		</property>
 		<property name="name">
 			<value>enem</value>
 		</property>
@@ -20,8 +23,14 @@
 	<object class="MixerBusEffectChain" id="{0ce15918-a8f4-4d7f-a467-82fdb9563797}">
 		<relationship name="effects">
 			<destination>{0875ad81-709a-414f-83a8-76506ff2087d}</destination>
+			<destination>{e019b18e-c99d-4765-bcfc-7f4957a566e1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{13b010c8-b968-4724-8980-bbb0c718823a}" />
 	<object class="MixerBusFader" id="{0875ad81-709a-414f-83a8-76506ff2087d}" />
+	<object class="CompressorEffect" id="{e019b18e-c99d-4765-bcfc-7f4957a566e1}">
+		<relationship name="sidechains">
+			<destination>{651b311c-f7b3-443e-8a49-8c79ee26aac7}</destination>
+		</relationship>
+	</object>
 </objects>

@@ -212,6 +212,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1048
+--- !u!114 &-4918966611158798241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/SlowMotion
+  m_EditorClassIdentifier: 
+  Path: snapshot:/SlowMotion
+  Guid:
+    Data1: -271514276
+    Data2: 1338204505
+    Data3: -1112740453
+    Data4: -1316162020
+  Banks:
+  - {fileID: -2924489851919269417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -203340087704423130}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4408869819851948318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,10 +282,10 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638320190208383093
+  lastModified: 638326218453197484
   FileSizes:
   - Name: Desktop
-    Value: 378304
+    Value: 499520
   Exists: 1
 --- !u!114 &-2891217544133037157
 MonoBehaviour:
@@ -337,7 +365,7 @@ MonoBehaviour:
   - {fileID: 7339868826659097967}
   MinDistance: 1
   MaxDistance: 20
-  Length: 347
+  Length: 420
 --- !u!114 &-1664971235149998116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,33 +392,6 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-988274199007471122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Snap/Damage
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Snap/Damage
-  Guid:
-    Data1: -1016312978
-    Data2: 1164594805
-    Data3: -1498680437
-    Data4: -1700353686
-  Banks:
-  - {fileID: -2924489851919269417}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
   Length: 0
 --- !u!114 &-777531579976650043
 MonoBehaviour:
@@ -441,11 +442,35 @@ MonoBehaviour:
   - {fileID: -2924489851919269417}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 8698
+--- !u!114 &-203340087704423130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SlowMotion/Intensity 2
+  m_EditorClassIdentifier: 
+  Name: Intensity 2
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 3779295602
+    data2: 3570400321
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,8 +487,6 @@ MonoBehaviour:
   - {fileID: 6918132495415489709}
   - {fileID: -2924489851919269417}
   EditorEvents:
-  - {fileID: 2439756217462375385}
-  - {fileID: 9178189650590373845}
   - {fileID: -2599022366668979760}
   - {fileID: -6276013248155923344}
   - {fileID: 6714205625886943005}
@@ -480,18 +503,18 @@ MonoBehaviour:
   - {fileID: 4306119494901221909}
   - {fileID: 7108714904881952496}
   - {fileID: 4568643217849183451}
-  - {fileID: -988274199007471122}
   - {fileID: 171245626261810247}
   - {fileID: -5296527935485678214}
   - {fileID: -1664971235149998116}
   - {fileID: -777531579976650043}
+  - {fileID: -4918966611158798241}
   EditorParameters:
   - {fileID: 6808059649677458383}
   MasterBanks:
   - {fileID: -2924489851919269417}
   StringsBanks:
   - {fileID: 6918132495415489709}
-  cacheTime: 638320190208422159
+  cacheTime: 638326218453222651
   cacheVersion: 131603
 --- !u!114 &171245626261810247
 MonoBehaviour:
@@ -520,57 +543,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
---- !u!114 &1170166473295150645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SlowMotion/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0.01
-  ID:
-    data1: 3906838759
-    data2: 2615662815
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &2439756217462375385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Snap/Reverb
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Snap/Reverb
-  Guid:
-    Data1: 1805406799
-    Data2: 1290384359
-    Data3: 500559497
-    Data4: -1522538538
-  Banks:
-  - {fileID: -2924489851919269417}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &3987830441621871556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,10 +802,10 @@ MonoBehaviour:
   Path: BatmanProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638320190208422159
+  lastModified: 638326218453222651
   FileSizes:
   - Name: Desktop
-    Value: 2242
+    Value: 2154
   Exists: 1
 --- !u!114 &7108714904881952496
 MonoBehaviour:
@@ -914,7 +886,7 @@ MonoBehaviour:
   - {fileID: -2891217544133037157}
   MinDistance: 1
   MaxDistance: 20
-  Length: 5000
+  Length: 500
 --- !u!114 &8371924996562883188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,32 +939,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &9178189650590373845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Snap/SlowMotion
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Snap/SlowMotion
-  Guid:
-    Data1: -271514276
-    Data2: 1338204505
-    Data3: -1112740453
-    Data4: -1316162020
-  Banks:
-  - {fileID: -2924489851919269417}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1170166473295150645}
-  MinDistance: 0
-  MaxDistance: 0
   Length: 0

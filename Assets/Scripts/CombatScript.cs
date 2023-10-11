@@ -40,16 +40,22 @@ public class CombatScript : MonoBehaviour
     public UnityEvent<EnemyScript> OnHit;
     public UnityEvent<EnemyScript> OnCounterAttack;
 
+    
+
     int animationCount = 0;
     string[] attacks;
     public int currentAttackIndex;
 
     public PlayerMovSounds playerMovSounds;
 
+    public GameObject SlowMotionSnap;
 
-    public FMOD.Studio.EventInstance snapshotSlowInst;
+    //public SlowMotionSnapshotSound slowmotionscript;
 
-    public int slowmotionInst;
+
+    //public FMOD.Studio.EventInstance snapshotSlowInst;
+
+    //public int slowmotionInst;
 
     
     
@@ -62,9 +68,7 @@ public class CombatScript : MonoBehaviour
         movementInput = GetComponent<MovementInput>();
         impulseSource = GetComponentInChildren<CinemachineImpulseSource>();
 
-        snapshotSlowInst = FMODUnity.RuntimeManager.CreateInstance("snaphot:/SlowMotion");
         
-        slowmotionInst = 1;
         
         
     }
@@ -180,15 +184,18 @@ public class CombatScript : MonoBehaviour
             Time.timeScale = .5f;
             lastHitCamera.SetActive(true);
             playerMovSounds.SlowMotion();
-            snapshotSlowInst.setParameterByName("Intensity", 0);
+            SlowMotionSnap.SetActive(true);
+           
             Debug.Log("Slow Motion is Final Blow Middle");
             lastHitFocusObject.position = lockedTarget.transform.position;
             yield return new WaitForSecondsRealtime(2);
-            snapshotSlowInst.setParameterByName("Intensity", 1);
             Debug.Log("End Slow Motion");
+            
             lastHitCamera.SetActive(false);
             Time.timeScale = 1f;
+            //SlowMotionSnap.SetActive(false);
             playerMovSounds.attackInst.setParameterByName("Enemy", 0);
+            //OnLastHit.Invoke(lockedTarget);
             
             
         }
@@ -199,9 +206,13 @@ public class CombatScript : MonoBehaviour
         OnTrajectory.Invoke(target);
         transform.DOLookAt(target.transform.position, .2f);
         transform.DOMove(TargetOffset(target.transform), duration);
+        //SlowMotionSnap.SetActive(true);
         playerMovSounds.PlayerWoosh(); 
+        
         playerMovSounds.PlayerJump();
+        
         Debug.Log("Flying movement");
+
     }
 
     void CounterCheck()
@@ -262,6 +273,7 @@ public class CombatScript : MonoBehaviour
         
         //Polish 
         punchParticle.PlayParticleAtPosition(punchPosition.position);
+       // SlowMotionSnap.SetActive(false);
         playerMovSounds.PlayerAttack();
         Debug.Log("Sound on Polish");
         

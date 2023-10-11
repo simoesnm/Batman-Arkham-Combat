@@ -55,7 +55,7 @@ public class PlayerMovSounds : MonoBehaviour
     public bool hitEnem = false;
     public bool playerAttack = false;
     CombatScript combatScript;
-    EnemyScript enemyScript;
+    //EnemyScript enemyScript;
 
   
 

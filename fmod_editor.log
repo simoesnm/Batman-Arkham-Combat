@@ -1,231 +1,23 @@
 [LOG] System::create                           : Header version = 2.02.13. Current version = 2.02.13.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20213 (132591), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 48000Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7ffa027bda08 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0000017CC93DDFE8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_2.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_2.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_3.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_3.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_4.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_4.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_5.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_5.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_6.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_6.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_7.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_7.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_8.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_8.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_9.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_9.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_10.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_10.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_11.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_11.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_12.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_12.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_13.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_13.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_14.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_14.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_15.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_15.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_16.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_16.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_17.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_17.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_18.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_18.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_19.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_19.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_20.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_20.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_21.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_21.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_22.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_22.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_23.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_23.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_24.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_24.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_25.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_25.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_26.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/simoesnm/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-rCCngs/hotswap_26.bank'
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] SoundI::release                          :  (0x7ffa2155e2d8)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE01 (0x7ffa2155e448)
-[LOG] SoundI::release                          :  (0x7ffa215d2628)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE02 (0x7ffa215d2798)
-[LOG] SoundI::release                          :  (0x7ffa2150fcb8)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE03 (0x7ffa2150fe28)
-[LOG] SoundI::release                          :  (0x7ffa215f36d8)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE04 (0x7ffa21548ad8)
-[LOG] SoundI::release                          :  (0x7ffa2150dd98)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE05 (0x7ffa2150df08)
-[LOG] SoundI::release                          :  (0x7ffa2151c0f8)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE06 (0x7ffa2151c268)
-[LOG] SoundI::release                          :  (0x7ffa215a68d8)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE07 (0x7ffa215a6a48)
-[LOG] SoundI::release                          :  (0x7ffa21515348)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE08 (0x7ffa215154b8)
-[LOG] SoundI::release                          :  (0x7ffa21511138)
-[LOG] SoundI::release                          :     BatmanFMODSWSH_Charattackswoosh 01_MIGUELN_NONE09 (0x7ffa215764c8)
-[LOG] SoundI::release                          :  (0x7ffa21556da8)
-[LOG] SoundI::release                          :     Cartoon, Boing, Retro, Jump 01 SND5934 (0x7ffa21556f18)
-[LOG] SoundI::release                          :  (0x7ffa215137e8)
-[LOG] SoundI::release                          :     Cartoon, Impact, Bonk, Crash, Hits 01 SND11776 2 (0x7ffa21513958)
-[LOG] SoundI::release                          :  (0x7ffa21514a28)
-[LOG] SoundI::release                          :     Cartoon, Impact, Bonk, Crash, Hits 01 SND11776 3 (0x7ffa21514b98)
-[LOG] SoundI::release                          :  (0x7ffa21512ec8)
-[LOG] SoundI::release                          :     Cartoon, Impact, Bonk, Crash, Hits 01 SND11776 (0x7ffa21513038)
-[LOG] SoundI::release                          :  (0x7ffa215570a8)
-[LOG] SoundI::release                          :     Robots, Voice, Sci-Fi, Says Warning SND32440 (0x7ffa21512718)
-[LOG] SoundI::release                          :  (0x7ffa2158bd28)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE09 (0x7ffa215334a8)
-[LOG] SoundI::release                          :  (0x7ffa215bb118)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE01 (0x7ffa215bb288)
-[LOG] SoundI::release                          :  (0x7ffa21548df8)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE02 (0x7ffa21548f68)
-[LOG] SoundI::release                          :  (0x7ffa215c0918)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE03 (0x7ffa215c0a88)
-[LOG] SoundI::release                          :  (0x7ffa215b8ae8)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE04 (0x7ffa215b8c58)
-[LOG] SoundI::release                          :  (0x7ffa21551b98)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE05 (0x7ffa21551d08)
-[LOG] SoundI::release                          :  (0x7ffa21514108)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE06 (0x7ffa21514278)
-[LOG] SoundI::release                          :  (0x7ffa215bfff8)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE07 (0x7ffa215c0168)
-[LOG] SoundI::release                          :  (0x7ffa2159bfb8)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE08 (0x7ffa2159c128)
-[LOG] SoundI::release                          :  (0x7ffa21549718)
-[LOG] SoundI::release                          :     BatmanFMODMETLImpt_Charattackmetalhit 01_MIGUELN_NONE09 (0x7ffa215fbd88)
-[LOG] SoundI::release                          :  (0x7ffa215801e8)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE01 (0x7ffa21580358)
-[LOG] SoundI::release                          :  (0x7ffa215f3248)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE02 (0x7ffa215f33b8)
-[LOG] SoundI::release                          :  (0x7ffa215af6a8)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE03 (0x7ffa215af818)
-[LOG] SoundI::release                          :  (0x7ffa21513358)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE04 (0x7ffa215134c8)
-[LOG] SoundI::release                          :  (0x7ffa21513c78)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE05 (0x7ffa21513de8)
-[LOG] SoundI::release                          :  (0x7ffa2151c588)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE06 (0x7ffa2155f178)
-[LOG] SoundI::release                          :  (0x7ffa21514598)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE07 (0x7ffa21514708)
-[LOG] SoundI::release                          :  (0x7ffa21510388)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE08 (0x7ffa215104f8)
-[LOG] SoundI::release                          :  (0x7ffa21536ea8)
-[LOG] SoundI::release                          :     BatmanFMODMETLTonl_Charattackmetalhit 01_MIGUELN_NONE09 (0x7ffa21537018)
-[LOG] SoundI::release                          :  (0x7ffa2155e768)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE07 (0x7ffa2155e8d8)
-[LOG] SoundI::release                          :  (0x7ffa2151e388)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE08 (0x7ffa2150da78)
-[LOG] SoundI::release                          :  (0x7ffa2151e088)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE09 (0x7ffa2151e1f8)
-[LOG] SoundI::release                          :  (0x7ffa215fdb88)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE10 (0x7ffa215fdcf8)
-[LOG] SoundI::release                          :  (0x7ffa2155d528)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE01 (0x7ffa2155d698)
-[LOG] SoundI::release                          :  (0x7ffa2151bc68)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE02 (0x7ffa2151bdd8)
-[LOG] SoundI::release                          :  (0x7ffa215bb5a8)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE03 (0x7ffa2155d208)
-[LOG] SoundI::release                          :  (0x7ffa215767e8)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE04 (0x7ffa21587128)
-[LOG] SoundI::release                          :  (0x7ffa21512a38)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE05 (0x7ffa21512ba8)
-[LOG] SoundI::release                          :  (0x7ffa2158b408)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE06 (0x7ffa2158b578)
-[LOG] SoundI::release                          :  (0x7ffa2154b128)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE07 (0x7ffa2154b298)
-[LOG] SoundI::release                          :  (0x7ffa2155de48)
-[LOG] SoundI::release                          :     BatmanFMODFGHTMisc_Charattackweirdhit 01_MIGUELN_NONE08 (0x7ffa2155dfb8)
-[LOG] SoundI::release                          :  (0x7ffa215157d8)
-[LOG] SoundI::release                          :     Designed, Misc, Slow Motion, Breathy 01 SND56124 (0x7ffa21551878)
-[LOG] SoundI::release                          :  (0x7ffa215c4658)
-[LOG] SoundI::release                          :     Designed, Drone, Slow Motion, Slowdown, Speedup 04 SND56110 2 (0x7ffa215c47c8)
-[LOG] SoundI::release                          :  (0x7ffa21579358)
-[LOG] SoundI::release                          :     BatmanFMOD8bit_Jump07 101 (0x7ffa215794c8)
-[LOG] SoundI::release                          :  (0x7ffa2159a8a8)
-[LOG] SoundI::release                          :     BatmanFMOD8bit_Jump07 102 (0x7ffa2159aa18)
-[LOG] SoundI::release                          :  (0x7ffa21549288)
-[LOG] SoundI::release                          :     BatmanFMOD8bit_Jump07 103 (0x7ffa215493f8)
-[LOG] SoundI::release                          :  (0x7ffa2155d9b8)
-[LOG] SoundI::release                          :     Robots, Movement, Transformer, Footsteps, Ground Breaks SND45987 1 (0x7ffa2155db28)
-[LOG] SoundI::release                          :  (0x7ffa215c0488)
-[LOG] SoundI::release                          :     Robots, Movement, Transformer, Footsteps, Ground Breaks SND45987 2 (0x7ffa215c05f8)
-[LOG] SoundI::release                          :  (0x7ffa2157fd58)
-[LOG] SoundI::release                          :     Robots, Movement, Transformer, Footsteps, Ground Breaks SND45987 3 (0x7ffa2157fec8)
-[LOG] SoundI::release                          :  (0x7ffa21510818)
-[LOG] SoundI::release                          :     Robots, Movement, Transformer, Footsteps, Ground Breaks SND45987 4 (0x7ffa21510988)
-[LOG] SoundI::release                          :  (0x7ffa21561bc8)
-[LOG] SoundI::release                          :     Robots, Movement, Transformer, Footsteps, Ground Breaks SND45987 5 (0x7ffa21561d38)
-[LOG] SoundI::release                          :  (0x7ffa2158b898)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE01 (0x7ffa2158ba08)
-[LOG] SoundI::release                          :  (0x7ffa21510ca8)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE02 (0x7ffa21510e18)
-[LOG] SoundI::release                          :  (0x7ffa215d2f28)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE03 (0x7ffa215d3098)
-[LOG] SoundI::release                          :  (0x7ffa21587448)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE04 (0x7ffa215d2c08)
-[LOG] SoundI::release                          :  (0x7ffa21514eb8)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE05 (0x7ffa21515028)
-[LOG] SoundI::release                          :  (0x7ffa215bac88)
-[LOG] SoundI::release                          :     BatmanFMODFGHTImpt_Charattacklowhit 01_MIGUELN_NONE06 (0x7ffa215badf8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] ProfileClient::markForDead               : Closing client connection
-[ERR] FMOD_OS_Net_Read                         : read failed with errno 9
-[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 43
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.

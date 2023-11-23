@@ -73,6 +73,7 @@ public class PlayerMovSounds : MonoBehaviour
         footstepInst = FMODUnity.RuntimeManager.CreateInstance(footstepEvent);
         jumpInst = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
         slowInst = FMODUnity.RuntimeManager.CreateInstance(slowEvent);
+        Cursor.visible = false;
         
     }
 
